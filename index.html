@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="fontawesome/css1/all.css">
+</head>
+
+<body>
+
+<section id="main">
+  <div class="b-g">
+    <div class="c-t">
+      <p></p>
+      <h1><%=listTitle%></h1>
+    </div>
+    <p class=p-text><%=whatText%></p>
+    <div class="todolist">
+      <div class="todo-list">
+        <ul>
+          <% for (var i=0; i<newListItems.length; i++) { %>
+          <li class="delete itemtext"><span id="check" class="fa fa-solid fa-square-check ic-check"></span><%= newListItems[i] %><span id="trash" class="fa-solid fa-trash ic-trash"></span> </li>
+          <hr />
+          <%  } %>
+        </ul>
+      </div>
+      <form action="/" method="post">
+        <input class="form1" type="text" name="newItem" placeholder="Add on your to do list" autocomplete="off" minlenght="3" maxlength="28">
+        <button class="btn1" type="submit" name="list" value="<%=listTitle%>">+</button>
+      </form>
+    </div>
+  </form>
+  </div>
+</section>
+
+<script src="js/index.js" charset="utf-8"></script>
+</body>
+<footer>
+  @2022 Copyright Meijer-Digital
+</footer>
+
+</html>
